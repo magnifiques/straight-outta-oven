@@ -1,0 +1,16 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //always use this instead of 10px
+    font-size: 62.5%;
+}
+
+body{
+    padding: 1.5rem;
+    box-sizing: border-box;
+}

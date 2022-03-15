@@ -1,0 +1,50 @@
+@use '../abstract/variables';
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: #777;
+}
+
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+
+    &--main{
+        display: block;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: 0.8rem;
+        animation: moveInLeft 1s ease-in-out;
+        user-select: none;    
+    }
+    
+    &--sub{
+        display: block;
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+        animation: moveInRight 1s ease-in-out;
+        user-select: none;
+    } 
+}
+
+.heading-tertiary{
+    font-size: variables.$default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: variables.$default-font-size;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}

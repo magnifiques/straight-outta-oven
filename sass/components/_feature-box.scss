@@ -1,0 +1,28 @@
+@use '../abstract/variables'; 
+
+.feature_box{
+
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-size: 1.5rem;
+    padding: 3.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.55);
+    transition: transform 0.3s;
+    user-select: none;
+}
+
+.feature-box__icon{
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, variables.$reddish, variables.$orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.feature_box:hover{
+    transform: translateY(-1.5rem) scale(1.03);
+}

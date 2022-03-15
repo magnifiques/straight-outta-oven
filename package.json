@@ -1,0 +1,16 @@
+{
+  "name": "straight-outta-oven",
+  "version": "1.0.0",
+  "description": "pizza site",
+  "main": "index.js",
+  "author": "toxx",
+  "license": "MIT",
+  "scripts": {
+    "sass-watch": "sass --watch sass/main.scss css/style.css"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.48.0"
+  }
+}
