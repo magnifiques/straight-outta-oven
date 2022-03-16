@@ -1,0 +1,172 @@
+@use '../abstract/variables';
+
+.card {
+    //*functionalities
+
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        color: white;
+        font-size: 2rem;
+
+        height: 50rem;
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;        
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(variables.$black, 0.15);
+
+        &--front {
+            background-color: variables.$white;
+        }
+
+        &--back {
+            transform: rotateY(-180deg);
+
+            &--1 {
+                background-image: linear-gradient(to right bottom, variables.$color-first-dark, variables.$color-first-light);
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right bottom, variables.$color-second-dark, variables.$color-second-light);
+            }
+
+            &--3 {
+                background-image: linear-gradient(to right bottom, variables.$color-third-dark, variables.$color-third-light);
+            }
+            
+        }
+
+        
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    &__picture {
+
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        --webkit--clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-left-radius: 3px;
+
+        &--1{
+            background-image: linear-gradient(to right bottom, 
+            rgba(variables.$color-first-dark, 0.2), 
+            rgba(variables.$color-first-light, 0.6)), 
+            url('/img/nat-4.jpg');
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, 
+            rgba(variables.$color-second-dark, 0.2), 
+            rgba(variables.$color-second-light, 0.6)), 
+            url('/img/nat-5.jpg');
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, 
+            rgba(variables.$color-third-dark, 0.1), 
+            rgba(variables.$color-third-light, 0.3)), 
+            url('/img/nat-6.jpg');
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+        color: variables.$white;
+        position: absolute;
+        top: 13rem;
+        right: 2rem;
+    }
+
+    &__heading--span {
+        
+        padding: 1rem 1.5rem;
+        --webkit--box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+        &--1{
+            background-image: linear-gradient(to right bottom, 
+            rgba(variables.$color-first-dark, 0.8), 
+            rgba(variables.$color-first-light, 0.9));
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, 
+            rgba(variables.$color-second-dark, 0.8), 
+            rgba(variables.$color-second-light, 0.9));
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, 
+            rgba(variables.$color-third-dark, 0.8), 
+            rgba(variables.$color-third-light, 0.9));
+        }
+    }
+
+    &__details {
+       color: black;
+       padding: 3rem;
+
+        ul{
+            
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li{
+                text-align: center;
+                font-size: 1.6rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid variables.$grey-dark;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);    
+        text-align: center;
+        width: 90%;
+    }
+
+    &__price--box{
+        text-align: center;
+        margin-bottom: 8rem;
+        color: variables.$white;
+    }
+
+    &__price--only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price--value{
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}

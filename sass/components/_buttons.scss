@@ -38,6 +38,24 @@
         }
     }
 
+    &--white {
+        background-color: variables.$white;
+        color: variables.$grey-dark;
+
+        &::after {
+            background-color: variables.$white;
+        }
+    }
+
+    &--violet {
+        background-color: variables.$violet;
+        color: variables.$white;
+
+        &::after {
+            background-color: variables.$violet;
+        }
+    }
+
     &::after {
         content: "";
         display: inline-block;
