@@ -24,6 +24,12 @@
     }
 }
 
+.heading-tertiary {
+    font-size: variables.$default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .section_features {
     padding: 20rem 0;
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.493),
@@ -42,4 +48,9 @@
     background-color: variables.$grey-light;
     padding: 25rem 0 10rem 0;
     margin-top: -10rem;
+}
+
+.section_stories {
+    background-color: variables.$grey-light;
+    padding: 15rem 0;
 }
