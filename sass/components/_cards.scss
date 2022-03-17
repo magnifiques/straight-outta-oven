@@ -69,21 +69,21 @@
             background-image: linear-gradient(to right bottom, 
             rgba(variables.$color-first-dark, 0.2), 
             rgba(variables.$color-first-light, 0.6)), 
-            url('/img/nat-4.jpg');
+            url('../../img/nat-4.jpg');
         }
 
         &--2{
             background-image: linear-gradient(to right bottom, 
             rgba(variables.$color-second-dark, 0.2), 
             rgba(variables.$color-second-light, 0.6)), 
-            url('/img/nat-5.jpg');
+            url('../../img/nat-5.jpg');
         }
 
         &--3{
             background-image: linear-gradient(to right bottom, 
             rgba(variables.$color-third-dark, 0.1), 
             rgba(variables.$color-third-light, 0.3)), 
-            url('/img/nat-6.jpg');
+            url('../../img/nat-6.jpg');
         }
     }
 
