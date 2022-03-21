@@ -1,7 +1,7 @@
 @use '../abstract/variables';
 
 .btn {
-
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -12,8 +12,12 @@
         transition: all 0.2s;
         position: relative;
         font-size: variables.$default-font-size;
-    }
 
+        //*changing for <button>
+        border: none;
+        cursor: pointer;
+    }
+    
     &:hover {
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -24,6 +28,7 @@
         }    
     }
 
+    &:focus,
     &:active {
         transform: translateY(-0.1rem);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -53,6 +58,15 @@
 
         &::after {
             background-color: variables.$violet;
+        }
+    }
+
+    &--red {
+        background-color: variables.$reddish;
+        color: variables.$white;
+
+        &::after {
+            background-color: variables.$reddish;
         }
     }
 
