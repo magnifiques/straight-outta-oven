@@ -562,4 +562,21 @@ body {
   padding: 15rem 0 6rem 0;
 }
 
+.section_order {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #e12301, #ce0000);
+}
+
+.order {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../img/nat-10.jpg");
+  background-size: 100%;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+.order__form {
+  width: 50%;
+  padding: 6rem;
+}
+
 /*# sourceMappingURL=style.css.map */
