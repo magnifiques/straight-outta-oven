@@ -70,6 +70,15 @@
         }
     }
 
+    &--blue {
+        background-color: variables.$blue;
+        color: variables.$white;
+
+        &::after {
+            background-color: variables.$blue;
+        }
+    }
+
     &::after {
         content: "";
         display: inline-block;
