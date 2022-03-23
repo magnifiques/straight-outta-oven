@@ -1,15 +1,16 @@
-//Abstract Folder
+//*Abstract Folder
 @use 'abstract/variables';
 @use 'abstract/mixins';
 
 
-//Base Folder
+//*Base Folder
 @use 'base/base.scss';
 @use 'base/animations';
 @use 'base/typography';
 @use 'base/utilities';
 
-//Component Folder
+
+//*Component Folder
 @use 'components/buttons';
 @use 'components/header';
 @use 'components/bg-video';
@@ -18,12 +19,14 @@
 @use 'components/cards';
 @use 'components/story';
 @use 'components/form';
+@use 'components/footer';
 
-//layouts folder
+
+//*layouts folder
 @use 'layouts/grid';
 
 
-//pages folder
+//*pages folder
 @use 'pages/home';
 
 
