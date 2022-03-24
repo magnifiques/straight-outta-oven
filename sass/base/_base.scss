@@ -28,6 +28,10 @@ html {
 }
 
 body{
-    padding: 1.5rem;
     box-sizing: border-box;
+    padding: 1.5rem;
+
+    @include mixins.responseSize(tab-port) {
+        padding: 0;
+    }
 }

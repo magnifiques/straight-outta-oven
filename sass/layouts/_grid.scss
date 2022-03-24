@@ -1,12 +1,28 @@
 @use '../abstract/variables';
 @use '../abstract/mixins';
 
+
+
 .row{
     max-width: variables.$grid-width;
     margin: 0 auto;
     
     &:not(:last-child){
         margin-bottom: variables.$gutter-vertical;
+
+        @include mixins.responseSize(tab-port) {
+            margin-bottom: variables.$gutter-vertical-small;
+        }
+    }
+
+    @include mixins.responseSize(tab-port) {
+        max-width: 80rem;
+        padding: 0 3rem;
+    }
+    
+    
+    @include mixins.responseSize(phone) {
+        max-width: 35rem;
     }
 
     @include mixins.clearfix;
@@ -20,6 +36,15 @@
 
         &:not(:last-child){
             margin-right: variables.$gutter-horizontal;
+
+            @include mixins.responseSize(tab-port) {
+                margin-right: 0;
+                margin-bottom: variables.$gutter-vertical-small;
+            }
+        }
+
+        @include mixins.responseSize(tab-port) {
+            width: 100% !important;
         }
     }
 

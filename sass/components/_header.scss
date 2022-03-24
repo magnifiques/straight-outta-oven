@@ -1,3 +1,5 @@
+@use '../abstract/mixins';
+
 .header {
     height: 95vh;
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.493), rgba(49, 49, 49, 0.123)) ,url('../img/hero.jpg');
@@ -6,6 +8,11 @@
     --webkit--clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     position: relative;
+
+    @include mixins.responseSize(phone) {
+        --webkit--clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 92vh, 0 100%);
+    }  
 
     &__logo-box {
         position: absolute;

@@ -1,4 +1,5 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 body {
     font-family: "Lato", sans-serif;
@@ -22,7 +23,18 @@ body {
         font-weight: 400;
         letter-spacing: 0.8rem;
         animation: moveInLeft 1s ease-in-out;
-        user-select: none;    
+        user-select: none;  
+        
+
+        @include mixins.responseSize(tab-land) {
+            letter-spacing: 0.5rem;
+            font-size: 4.5rem;
+        }
+
+        @include mixins.responseSize(phone) {
+            letter-spacing: 0.5rem;
+            font-size: 4rem;
+        }
     }
     
     &--sub{
@@ -32,6 +44,16 @@ body {
         letter-spacing: 0.5rem;
         animation: moveInRight 1s ease-in-out;
         user-select: none;
+
+        @include mixins.responseSize(tab-land) {
+            letter-spacing: 0.5rem;
+            font-size: 2rem;
+        }
+
+        @include mixins.responseSize(phone) {
+            letter-spacing: 0.3rem;
+            font-size: 1.5rem;
+        }
     } 
 }
 

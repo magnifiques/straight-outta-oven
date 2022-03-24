@@ -1,4 +1,5 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .footer {
     font-size: 1.4rem;
@@ -6,6 +7,9 @@
     background-color: variables.$grey-dark;
     color: variables.$grey-light;
 
+    @include mixins.responseSize(tab-port) {
+        padding: 3rem 0 8rem 0;
+    }
     
     &__logo-box {
         text-align: center;
@@ -21,6 +25,11 @@
         border-top: 3px solid #eee;
         padding-top: 2rem;
         display: inline-block;
+
+        @include mixins.responseSize(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -57,6 +66,11 @@
     &__copyright {
         border-top: 3px solid #eee;
         padding-top: 2rem;
-        float: right;
+        float: right; 
+        
+        @include mixins.responseSize(tab-port) {
+            width: 100%;
+            float: none;
+        }
     }
 }
