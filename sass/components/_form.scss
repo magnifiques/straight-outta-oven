@@ -1,4 +1,6 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
+
 
 .form {
     &__group:not(:last-child){
@@ -30,7 +32,11 @@
     &::-webkit-input-placeholder {
         color: variables.$grey;
     }
+
+    @include mixins.responseSize(tab-port) {
+        width: 100%;
     }
+  }
 
 
     &__label {
@@ -51,6 +57,11 @@
     &__radio-group {
         width: 33%;
         display: inline-block;
+
+        @include mixins.responseSize(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-label {

@@ -1,4 +1,5 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .story{
     width: 75%;
@@ -7,10 +8,26 @@
     background-color: rgba(variables.$white, 0.8);
     border-radius: 3px;
     padding: 6rem;
+    padding-left: 7rem;
     font-size: variables.$default-font-size;
-    transform: skewX(-10deg);
-    
+    transform: skewX(-12deg);
 
+    @include mixins.responseSize(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 5rem;
+        
+    }
+
+    @include mixins.responseSize(phone) {
+        transform: skewX(0);
+        width: 100%;
+    }
+    &__row {
+        @include mixins.responseSize(phone) {
+            max-width: 70rem;
+        }
+    }
     &__shape {
         position: relative;
         width: 15rem;
@@ -23,6 +40,11 @@
         clip-path: circle(50% at 50% 50%);
         
         transform: translate(-2rem, -1rem) skewX(10deg);
+
+        @include mixins.responseSize(phone) {
+            transform: translate(-2rem, -1rem) skewX(0);
+            margin: auto;
+        }
     }
 
     &__img {
@@ -33,6 +55,10 @@
 
     &__text {
         transform: skewX(10deg);
+
+        @include mixins.responseSize(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {

@@ -10,7 +10,7 @@ body {
 }
 
 
-.heading-primary{
+.heading-primary {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -28,12 +28,13 @@ body {
 
         @include mixins.responseSize(tab-land) {
             letter-spacing: 0.5rem;
-            font-size: 4.5rem;
+            font-size: 6rem;
         }
 
         @include mixins.responseSize(phone) {
             letter-spacing: 0.5rem;
-            font-size: 4rem;
+            font-size: 5rem;
+            margin-bottom: 1rem;
         }
     }
     
@@ -47,12 +48,14 @@ body {
 
         @include mixins.responseSize(tab-land) {
             letter-spacing: 0.5rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            margin-top: 1rem;
         }
 
         @include mixins.responseSize(phone) {
             letter-spacing: 0.3rem;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            margin-top: 1rem;
         }
     } 
 }

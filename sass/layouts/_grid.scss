@@ -22,7 +22,7 @@
     
     
     @include mixins.responseSize(phone) {
-        max-width: 35rem;
+        max-width: 50rem;
     }
 
     @include mixins.clearfix;
