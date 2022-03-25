@@ -8,7 +8,7 @@
     color: variables.$grey-light;
 
     @include mixins.responseSize(tab-port) {
-        padding: 3rem 0 8rem 0;
+        padding: 6rem 0 8rem 0;
     }
     
     &__logo-box {

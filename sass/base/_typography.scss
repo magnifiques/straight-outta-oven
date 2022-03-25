@@ -28,7 +28,7 @@ body {
 
         @include mixins.responseSize(tab-land) {
             letter-spacing: 0.5rem;
-            font-size: 6rem;
+            font-size: 5rem;
         }
 
         @include mixins.responseSize(phone) {
@@ -55,7 +55,7 @@ body {
         @include mixins.responseSize(phone) {
             letter-spacing: 0.3rem;
             font-size: 2rem;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
     } 
 }
@@ -74,6 +74,10 @@ body {
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba(black, .2);
+    }
+
+    @include mixins.responseSize(tab-port) {
+        font-size: 3.3rem;
     }
 }
 

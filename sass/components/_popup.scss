@@ -33,6 +33,9 @@
         transform: translate(-50%, -50%) scale(0.25);
         transition: all 0.4s 0.2s;    
         
+        @include mixins.responseSize(tab-port) {
+            
+        }
     }
 
     &__left {
@@ -55,11 +58,11 @@
         @include mixins.responseSize(tab-port) {
             display: block;
             width: 100%;
-            margin-top: 30rem;
+         
         }
 
         @include mixins.responseSize(phone) {
-            margin-top: 20rem;
+            
         }
     }
 
@@ -68,11 +71,11 @@
         width: 100%;
 
         @include mixins.responseSize(tab-port) {
-            position: absolute;
-            top: 10;
-            left: 0;
-            width: 50%;
-
+            // position: absolute;
+            // top: 10;
+            // left: 0;
+            // width: 50%;
+            display: none;
             &:last-child {
                 top: 10;
                 left: 50%;
@@ -96,6 +99,10 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include mixins.responseSize(tab-port) {
+            font-size: 1.3rem;
+        }
     }
 
     &__close {
@@ -112,7 +119,7 @@
             line-height: 1;
 
             @include mixins.responseSize(tab-port) {
-                color: white;
+                color: gray;
                 z-index: 100;
             }
         }
