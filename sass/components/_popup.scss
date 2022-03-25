@@ -31,12 +31,18 @@
         display: table;
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.25);
-        transition: all 0.4s 0.2s;
+        transition: all 0.4s 0.2s;    
+        
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
+        position: relative;
+        @include mixins.responseSize(tab-port) {
+            width: 100%;
+            display: block;
+        }
     }
 
     &__right {
@@ -44,15 +50,38 @@
         display: table-cell;
         vertical-align: top;
         padding: 3rem 5rem;
+
+        
+        @include mixins.responseSize(tab-port) {
+            display: block;
+            width: 100%;
+            margin-top: 30rem;
+        }
+
+        @include mixins.responseSize(phone) {
+            margin-top: 20rem;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include mixins.responseSize(tab-port) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+
+            &:last-child {
+                top: 0;
+                left: 50%;
+            }
+        }
     }
 
     &__text {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         margin-bottom: 3rem;
 
         -moz-column-count: 2;
