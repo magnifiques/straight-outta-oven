@@ -69,12 +69,12 @@
 
         @include mixins.responseSize(tab-port) {
             position: absolute;
-            top: 0;
+            top: 10;
             left: 0;
             width: 50%;
 
             &:last-child {
-                top: 0;
+                top: 10;
                 left: 50%;
             }
         }
@@ -110,6 +110,11 @@
             display: inline-block;
             transition: all 0.1s;
             line-height: 1;
+
+            @include mixins.responseSize(tab-port) {
+                color: white;
+                z-index: 100;
+            }
         }
 
         &:hover {
