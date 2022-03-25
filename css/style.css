@@ -406,6 +406,7 @@ body {
 .composition__photo--p1 {
   left: 0;
   top: -2rem;
+  z-index: 1;
 }
 @media (max-width: 56.25em) {
   .composition__photo--p1 {
@@ -422,6 +423,7 @@ body {
 .composition__photo--p2 {
   right: 0;
   top: 2rem;
+  z-index: 10;
 }
 @media (max-width: 56.25em) {
   .composition__photo--p2 {
@@ -440,6 +442,7 @@ body {
 .composition__photo--p3 {
   left: 20%;
   top: 10rem;
+  z-index: 20;
 }
 @media (max-width: 56.25em) {
   .composition__photo--p3 {
@@ -459,7 +462,7 @@ body {
   outline: 1.5rem solid #e12301;
   transform: scale(1.05) translateY(-0.5rem);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.7);
-  z-index: 20;
+  z-index: 100;
 }
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.9);
