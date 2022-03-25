@@ -30,6 +30,14 @@
         left: 50%;
         transform: translate(-50%, 50%);
         text-align: center;
+
+        @include mixins.responseSize(tab-port) {
+            top: 10%;
+        }
+
+        @include mixins.responseSize(phone) {
+            top: 5%;
+        }
     }
 }
 

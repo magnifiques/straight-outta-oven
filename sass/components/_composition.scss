@@ -1,4 +1,5 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .composition{
 
@@ -13,20 +14,60 @@
        transition: all 0.2s;
        outline-offset: 2rem;
 
+       @include mixins.responseSize(tab-port) {
+           position: relative;
+           float: left;
+           width: 33.333333%;
+           box-shadow: 0 1.5rem 3rem rgba(black, 0.2);
+       }
 
         &--p1{
             left: 0;
             top: -2rem;
+
+            @include mixins.responseSize(tab-port) {
+                top: -1rem;
+                transform: scale(1.1);
+            }
+
+            @include mixins.responseSize(phone) {
+                top: -1rem;
+                transform: scale(1.4);
+            }
         }
 
         &--p2{
             right: 0;
             top: 2rem;
+
+            @include mixins.responseSize(tab-port) {
+                top: 1rem;
+                transform: scale(1.3);
+                z-index: 100;
+            }
+
+            @include mixins.responseSize(phone) {
+                top: 1rem;
+                transform: scale(1.6);
+                z-index: 100;
+            }
         }
 
         &--p3{
             left: 20%;
             top: 10rem;
+
+            @include mixins.responseSize(tab-port) {
+                top: -1rem;
+                transform: scale(1.1);
+                left: 0;
+            }
+
+            @include mixins.responseSize(phone) {
+                top: -1rem;
+                transform: scale(1.4);
+                left: 0;
+            }
         }
 
         &:hover{

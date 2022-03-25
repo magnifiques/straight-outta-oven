@@ -1,5 +1,6 @@
 //for one goal thingy
 //for functionality of course
+@use '../abstract/mixins';
 
 .u-center-text {
     text-align: center !important; 
@@ -9,14 +10,26 @@
 
 .u-margin-bottom-big {
     margin-bottom: 8rem !important;
+
+    @include mixins.responseSize(tab-port) {
+        margin-bottom: 7rem !important;
+    } 
 }
 
 .u-margin-bottom-medium {
     margin-bottom: 6rem !important;
+
+    @include mixins.responseSize(tab-port) {
+        margin-bottom: 5rem !important;
+    }
 }
 
 .u-margin-bottom-moderate {
     margin-bottom: 3rem !important;
+
+    @include mixins.responseSize(tab-port) {
+        margin-bottom: 2rem !important;
+    }
 }
 
 .u-margin-bottom-small {

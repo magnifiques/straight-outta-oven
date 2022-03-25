@@ -1,9 +1,18 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .section-about {
     background-color: variables.$grey-light;
     padding: 25rem 0;
     margin-top: -20vh; 
+
+    @include mixins.responseSize(tab-port) {
+        padding: 27rem 0;
+    }  
+
+    @include mixins.responseSize(phone) {
+        padding: 28rem 0;
+    } 
 }
 
 .heading-secondary {
@@ -42,22 +51,38 @@
      & > * {
          transform: skewY(7deg);
      }
+
+     @include mixins.responseSize(tab-port) {
+        padding: 15rem 0;
+    }  
 }
 
 .section_delivery {
     background-color: variables.$grey-light;
     padding: 25rem 0 10rem 0;
     margin-top: -10rem;
+
+    @include mixins.responseSize(tab-port) {
+        padding: 20rem 0 5rem 0;
+    }  
 }
 
 .section_stories {
     position: relative;
     padding: 15rem 0 6rem 0;
+
+    @include mixins.responseSize(tab-port) {
+        padding: 10rem 0 5rem 0;
+    } 
 }
 
 .section_order {
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, variables.$reddish, variables.$maroon);
+
+    @include mixins.responseSize(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .order {
