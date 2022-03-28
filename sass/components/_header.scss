@@ -1,13 +1,37 @@
 @use '../abstract/mixins';
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.493), rgba(49, 49, 49, 0.123)) ,url('../img/hero.jpg');
+    height: 85vh;
+    background-image: linear-gradient(to right bottom, 
+    rgba(0, 0, 0, 0.493), rgba(49, 49, 49, 0.123)) ,
+    url('../../img/hero-small.jpg');
     background-size: cover;
     background-position: center;
-    --webkit--clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     position: relative;
+
+    @supports (clip-path: polygon(0, 0)) or 
+    (--webkit--clip-path: polygon(0,0)) {
+        --webkit--clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        height: 95vh;
+    }
+
+    //!Media queries should be in em!
+
+    @media only screen and (min-resolution: 192dpi) 
+           and (min-width: 37.5em),
+           (-webkit-min-device-pixel-ratio: 2) 
+           and (mix-width: 37.5em),
+           (min-width: 125em) 
+            
+            //* 600px/16 = 37.5em 
+            //? 2000px/16 = 125em
+    {
+        background-image: linear-gradient(to right bottom, 
+        rgba(0, 0, 0, 0.493), rgba(49, 49, 49, 0.123)) ,
+        url('../../img/hero.jpg');
+    }
+
 
     @include mixins.responseSize(phone) {
         --webkit--clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
